@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Tilemaps/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Obstacles/Bottomless Pit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://VCR_OSD_MONO.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Levels/Level Mover/Level Mover.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sounds/Music/Level 3.ogg" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[node name="Level 3" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 655391, 0, 0, 655394, 0, 0, 655397, 0, 0, 655400, 0, 0, 720926, 0, 0, 786461, 0, 0, 851996, 0, 0, 852013, 0, 0, 852014, 0, 0, 852015, 0, 0, 852016, 0, 0, 917504, 0, 0, 917505, 0, 0, 917507, 0, 0, 917508, 0, 0, 917510, 0, 0, 917511, 0, 0, 917513, 0, 0, 917514, 0, 0, 917517, 0, 0, 917520, 0, 0, 917523, 0, 0, 917531, 0, 0, 917556, 0, 0, 917557, 0, 0, 917558, 0, 0, 917559, 0, 0, 983066, 0, 0, 1048599, 0, 0, 1114171, 0, 0, 1114172, 0, 0, 1114173, 0, 0, 1114174, 0, 0, 1114175, 0, 0, 1114176, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 216 )
+
+[node name="Bottomless Pit" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, 384 )
+scale = Vector2( 200, 2 )
+
+[node name="LevelName" type="Label" parent="."]
+margin_left = -144.0
+margin_top = 136.0
+margin_right = 18.0
+margin_bottom = 151.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+text = "Level 3: The Abyss"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level Mover" parent="." instance=ExtResource( 5 )]
+position = Vector2( 992, 272 )
+scale = Vector2( 6, 1 )
+next_level = "res://Levels/Level 4/Level 4.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+bus = "Music"

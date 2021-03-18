@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tilemaps/Ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://VCR_OSD_MONO.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Obstacles/Bottomless Pit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Obstacles/Raising spikes/Raising Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Level Mover/Level Mover.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sounds/Music/Level 4.ogg" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="Level 4" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( -7340029, 0, 0, -7340028, 0, 0, -7340027, 0, 0, -7340026, 0, 0, -7340025, 0, 0, -7143414, 0, 0, -7143413, 0, 0, -7143412, 0, 0, -7012337, 0, 0, -7012336, 0, 0, -7012335, 0, 0, -6881260, 0, 0, -6881259, 0, 0, -6881258, 0, 0, -6750183, 0, 0, -6619108, 0, 0, -6488033, 0, 0, -6356958, 0, 0, -6160348, 0, 0, -5963739, 0, 0, -5832669, 0, 0, -5701599, 0, 0, -5570529, 0, 0, -5439459, 0, 0, -5308389, 0, 0, -5111784, 0, 0, -4915173, 0, 0, -4718568, 0, 0, -4521957, 0, 0, -4325352, 0, 0, -4194283, 0, 0, -4194282, 0, 0, -4063215, 0, 0, -4063214, 0, 0, -3932147, 0, 0, -3932146, 0, 0, -3801079, 0, 0, -3801078, 0, 0, -3670011, 0, 0, -3670010, 0, 0, -3538936, 0, 0, -3538935, 0, 0, -3407860, 0, 0, -3407859, 0, 0, -3276784, 0, 0, -3276783, 0, 0, -3145708, 0, 0, -3145707, 0, 0, -3014632, 0, 0, -3014631, 0, 0, -2883556, 0, 0, -2883555, 0, 0, -2883554, 0, 0, -2686953, 0, 0, -2686952, 0, 0, -2686951, 0, 0, -2555886, 0, 0, -2555885, 0, 0, -2555884, 0, 0, -2424817, 0, 0, -2424816, 0, 0, -2424815, 0, 0, -2293750, 0, 0, -2293749, 0, 0, -2293748, 0, 0, -2162674, 0, 0, -2162673, 0, 0, -2162672, 0, 0, -1966063, 0, 0, -1966062, 0, 0, -1966061, 0, 0, -1900530, 0, 0, -1900529, 0, 0, -1900528, 0, 0, -1834997, 0, 0, -1834996, 0, 0, -1834995, 0, 0, -1703930, 0, 0, -1703929, 0, 0, -1703928, 0, 0, -1572863, 0, 0, -1572862, 0, 0, -1572861, 0, 0, -1441787, 0, 0, -1441786, 0, 0, -1441785, 0, 0, -1441783, 0, 0, -1441782, 0, 0, -1441781, 0, 0, -1245173, 0, 0, -1245172, 0, 0, -1245171, 0, 0, -1114105, 0, 0, -1114104, 0, 0, -1114103, 0, 0, -917502, 0, 0, -917501, 0, 0, -917500, 0, 0, -786425, 0, 0, -655348, 0, 0, -655347, 0, 0, -655346, 0, 0, -524281, 0, 0, -524280, 0, 0, -524279, 0, 0, -393214, 0, 0, -393213, 0, 0, -393212, 0, 0, -262137, 0, 0, -262136, 0, 0, -262135, 0, 0, -65531, 0, 0, -65530, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0 )
+
+[node name="LevelName" type="Label" parent="."]
+margin_left = -88.0
+margin_top = 56.0
+margin_right = 65.0
+margin_bottom = 71.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+text = "Level 4: Vertical"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="Label" parent="."]
+margin_left = -24.0
+margin_top = 80.0
+margin_right = 228.0
+margin_bottom = 95.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 2 )
+text = "You can jump higher, for now"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottomless Pit" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64, 224 )
+scale = Vector2( 200, 2 )
+
+[node name="Raising Spikes" parent="." instance=ExtResource( 5 )]
+position = Vector2( -56, 224 )
+
+[node name="Raising Spikes2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 920, 224 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 136 )
+jumppower = 250
+
+[node name="Level Mover" parent="." instance=ExtResource( 6 )]
+position = Vector2( 88, -1792 )
+scale = Vector2( 4.5, 1 )
+next_level = "res://Levels/Level 5/Level 5.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+bus = "Music"
