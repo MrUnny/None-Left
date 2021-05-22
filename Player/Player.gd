@@ -16,7 +16,7 @@ var canrestart = false
 var candie = true
 
 
-# WHAT THE FUCK DID I DO WHY DIDN'T I PUT ANY VARIABLES FOR THE NODES I HAD 4 DAYS LEFT I WASN'T IN A TIME CRUNCH WHY WHY WHY WHY WHY WHY WHY
+# WHAT THE FUCK DID I DO WHY DIDN'T I PUT ANY VARIABLES FOR THE NODES I HAD 10 DAYS LEFT I WASN'T IN A TIME CRUNCH WHY WHY WHY WHY WHY WHY WHY
 # I'm lucky I didn't do it too much so the game still runs fine. But still, Why?!
 func die():
 	if candie:
@@ -64,17 +64,13 @@ func _physics_process(delta):
 	
 	vel = move_and_slide(vel, UP) #This actually makes the player able to move
 	
-	#Toggling fullscreen
-	if Input.is_action_just_pressed("toggle_fullscreen"): #F11, player cannot hold down F11 making the window freak out (PS: I really didn't need to write this comment, but here it is)
-		OS.window_fullscreen = !OS.window_fullscreen
-	
 	#Quitting to title screen
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene("res://Title Screen/Title Screen.tscn")
 	
 	#Reloading current scene (For testing purposes)
-	if Input.is_action_just_pressed("reload"): #Shift+R
-		get_tree().reload_current_scene()
+	#if Input.is_action_just_pressed("reload"): #Shift+R
+	#	get_tree().reload_current_scene()
 	
 	#When the player dies they can restart the level they died in
 	if Input.is_action_pressed("restart") and canrestart == true:

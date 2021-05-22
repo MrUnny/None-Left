@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Title Screen/Settings/Settings.gd" type="Script" id=2]
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MuteMusic" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = -48.15
+margin_right = 80.0
+margin_bottom = -0.149994
+focus_mode = 0
+theme = ExtResource( 1 )
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Mute Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MuteSFX" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = 18.0
+margin_right = 80.0
+margin_bottom = 66.0
+focus_mode = 0
+theme = ExtResource( 1 )
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Mute SFX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -48.0
+margin_right = 160.0
+theme = ExtResource( 1 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="toggled" from="MuteMusic" to="." method="_on_MuteMusic_toggled"]
+[connection signal="toggled" from="MuteSFX" to="." method="_on_MuteSFX_toggled"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]

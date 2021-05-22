@@ -23,6 +23,11 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://Player/RobotMC.png"
 config/windows_native_icon="res://gameicon.ico"
 
+[autoload]
+
+MusicController="*res://Autoloads/MusicController.tscn"
+ScreenController="*res://Autoloads/ScreenController.tscn"
+
 [display]
 
 window/size/width=1280
@@ -75,6 +80,7 @@ restart={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/filters/anisotropic_filter_level=1
 environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
